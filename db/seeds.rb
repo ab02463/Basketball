@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+welcome = Basketball.where(title:'Welcome').first
+welcome.delete if welcome
+
+Basketball = Basketball.create([title:'Welcome',description:'To the court booking'])

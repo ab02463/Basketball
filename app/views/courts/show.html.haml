@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @court.name
+%p
+  %b Review:
+  = @court.review
+
+= link_to 'Edit', edit_court_path(@court)
+\|
+= link_to 'Back', courts_path
