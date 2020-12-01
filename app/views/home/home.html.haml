@@ -1,0 +1,12 @@
+%h1= t('.title')
+%p= t('.welcome')
+
+%br/
+%form{:method => "post"}
+  %p1= t('.email')
+  %input#email{:name => "Email", :type => "text"}/
+  %p2= t('.fname')
+  %input#fname{:name => "fname", :type => "text"}/
+  %p3= t('.lname')
+  %input#lname{:name => "lname", :type => "text"}/
+  %input{:type => "submit", :value => "Submit"}/
