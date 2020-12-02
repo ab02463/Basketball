@@ -28,3 +28,19 @@ body {
 h1 {
   text-transform: uppercase;
 }
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 185px;
+  background-color: gold;
+  border:3px solid #555;
+  overflow: hidden;
+}
+li{
+  padding: 14px 16px;
+  text-align: center;
+  display: inline;
+  border-left: 1px solid #555;
+}
