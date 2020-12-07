@@ -5,7 +5,7 @@
     %tr
       %th Name
       %th Address
-      %th Employee working
+      %th Employee
       %th
       %th
       %th
@@ -15,7 +15,7 @@
       %tr
         %td= court.name
         %td= court.address
-        %td= court.employee_working
+        %td= court.employee
         %td= link_to 'Show', court
         %td= link_to 'Edit', edit_court_path(court)
         %td= link_to 'Destroy', court, method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,3 +1,3 @@
 class Court < ApplicationRecord
-  belongs_to :employee_working
+  belongs_to :employee
 end

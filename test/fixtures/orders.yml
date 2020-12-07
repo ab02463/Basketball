@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Court: one
+  user: one
+  DateTime: MyString
+
+two:
+  Court: two
+  user: two
+  DateTime: MyString

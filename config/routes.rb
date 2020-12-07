@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :courts
+  resources :orders
   resources :employees
   devise_for :users
   root 'home#home'

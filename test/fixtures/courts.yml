@@ -3,9 +3,9 @@
 one:
   name: MyString
   address: MyString
-  employee_working: one
+  employee: one
 
 two:
   name: MyString
   address: MyString
-  employee_working: two
+  employee: two

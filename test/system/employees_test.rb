@@ -15,7 +15,7 @@ class EmployeesTest < ApplicationSystemTestCase
     click_on "New Employee"
 
     fill_in "Age", with: @employee.age
-    fill_in "Employee", with: @employee.employee_id
+    fill_in "Id", with: @employee.id
     fill_in "Name", with: @employee.name
     fill_in "Telephone", with: @employee.telephone
     click_on "Create Employee"
@@ -29,7 +29,7 @@ class EmployeesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Age", with: @employee.age
-    fill_in "Employee", with: @employee.employee_id
+    fill_in "Id", with: @employee.id
     fill_in "Name", with: @employee.name
     fill_in "Telephone", with: @employee.telephone
     click_on "Update Employee"

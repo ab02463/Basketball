@@ -15,7 +15,7 @@ class CourtsTest < ApplicationSystemTestCase
     click_on "New Court"
 
     fill_in "Address", with: @court.address
-    fill_in "Employee working", with: @court.employee_working_id
+    fill_in "Employee", with: @court.employee_id
     fill_in "Name", with: @court.name
     click_on "Create Court"
 
@@ -28,7 +28,7 @@ class CourtsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Address", with: @court.address
-    fill_in "Employee working", with: @court.employee_working_id
+    fill_in "Employee", with: @court.employee_id
     fill_in "Name", with: @court.name
     click_on "Update Court"
 

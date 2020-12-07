@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Court:
+  = @order.Court
+%p
+  %b User:
+  = @order.user
+%p
+  %b Datetime:
+  = @order.DateTime
+
+= link_to 'Edit', edit_order_path(@order)
+\|
+= link_to 'Back', orders_path

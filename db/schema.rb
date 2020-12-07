@@ -10,27 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_133635) do
+ActiveRecord::Schema.define(version: 2020_12_07_181632) do
 
   create_table "courts", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.integer "employee_working_id"
+    t.integer "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["employee_working_id"], name: "index_courts_on_employee_working_id"
+    t.index ["address"], name: "index_courts_on_address", unique: true
+    t.index ["employee_id"], name: "index_courts_on_employee_id"
     t.index ["name"], name: "index_courts_on_name", unique: true
   end
 
   create_table "employees", force: :cascade do |t|
-    t.integer "employee_id"
     t.string "name"
     t.integer "age"
     t.string "telephone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["employee_id"], name: "index_employees_on_employee_id", unique: true
+    t.index ["id"], name: "index_employees_on_id", unique: true
     t.index ["telephone"], name: "index_employees_on_telephone", unique: true
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "Court_id", null: false
+    t.integer "user_id", null: false
+    t.string "DateTime", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["Court_id"], name: "index_orders_on_Court_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
