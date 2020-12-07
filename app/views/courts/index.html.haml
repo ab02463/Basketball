@@ -4,7 +4,8 @@
   %thead
     %tr
       %th Name
-      %th Review
+      %th Address
+      %th Employee working
       %th
       %th
       %th
@@ -13,7 +14,8 @@
     - @courts.each do |court|
       %tr
         %td= court.name
-        %td= court.review
+        %td= court.address
+        %td= court.employee_working
         %td= link_to 'Show', court
         %td= link_to 'Edit', edit_court_path(court)
         %td= link_to 'Destroy', court, method: :delete, data: { confirm: 'Are you sure?' }

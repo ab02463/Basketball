@@ -14,8 +14,9 @@ class CourtsTest < ApplicationSystemTestCase
     visit courts_url
     click_on "New Court"
 
+    fill_in "Address", with: @court.address
+    fill_in "Employee working", with: @court.employee_working_id
     fill_in "Name", with: @court.name
-    fill_in "Review", with: @court.review
     click_on "Create Court"
 
     assert_text "Court was successfully created"
@@ -26,8 +27,9 @@ class CourtsTest < ApplicationSystemTestCase
     visit courts_url
     click_on "Edit", match: :first
 
+    fill_in "Address", with: @court.address
+    fill_in "Employee working", with: @court.employee_working_id
     fill_in "Name", with: @court.name
-    fill_in "Review", with: @court.review
     click_on "Update Court"
 
     assert_text "Court was successfully updated"

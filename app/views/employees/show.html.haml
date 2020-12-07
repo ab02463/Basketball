@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Employee:
+  = @employee.employee_id
+%p
+  %b Name:
+  = @employee.name
+%p
+  %b Age:
+  = @employee.age
+%p
+  %b Telephone:
+  = @employee.telephone
+
+= link_to 'Edit', edit_employee_path(@employee)
+\|
+= link_to 'Back', employees_path

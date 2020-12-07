@@ -10,39 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_175515) do
-
-  create_table "Booking", primary_key: "Booking_ID", force: :cascade do |t|
-    t.integer "Customer_ID", null: false
-    t.integer "Court_ID", null: false
-    t.integer "Employee_ID", null: false
-  end
-
-  create_table "Court", primary_key: "Court_ID", force: :cascade do |t|
-    t.string "Address", limit: 255, null: false
-  end
-
-  create_table "Customer", primary_key: "Customer_ID", force: :cascade do |t|
-    t.string "Name", limit: 255, null: false
-    t.integer "Age", null: false
-    t.string "Telephone", limit: 20, default: "‘000’"
-  end
-
-  create_table "Employee", primary_key: "Employee_ID", force: :cascade do |t|
-    t.string "Name", limit: 255, null: false
-    t.integer "Age", null: false
-    t.string "Telephone", limit: 255, null: false
-  end
-
-  create_table "Employee_Emails", primary_key: "Email", id: :string, limit: 255, force: :cascade do |t|
-    t.integer "Employee_ID", null: false
-  end
+ActiveRecord::Schema.define(version: 2020_12_07_133635) do
 
   create_table "courts", force: :cascade do |t|
     t.string "name"
-    t.text "review"
+    t.string "address"
+    t.integer "employee_working_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["employee_working_id"], name: "index_courts_on_employee_working_id"
+    t.index ["name"], name: "index_courts_on_name", unique: true
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.integer "employee_id"
+    t.string "name"
+    t.integer "age"
+    t.string "telephone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_employees_on_employee_id", unique: true
+    t.index ["telephone"], name: "index_employees_on_telephone", unique: true
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

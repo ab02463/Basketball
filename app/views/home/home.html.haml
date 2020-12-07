@@ -2,7 +2,7 @@
 %p= t('.welcome')
 
 %br/
-%form{:method => "post"}
+%form{:method => "post",:action => "/new_order"}
   %p1= t('.email')
   %input#email{:name => "Email", :type => "text"}/
   %p2= t('.fname')
