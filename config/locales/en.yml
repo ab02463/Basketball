@@ -38,8 +38,8 @@ en:
       title: My courts
       welcome: Welcome to My Court!
       email: 'Email:'
-      fname: 'First name:'
-      lname: 'Last name:'
+      fname: 'Court Name:'
+      lname: 'Date time:'
 
 
     contact:

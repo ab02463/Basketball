@@ -1,6 +1,17 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
+  def make_order
+    insert_query = <<-SQL
+      INSERT INTO orders (Court_id, user_id, DateTime)
+      VALUES (?, ?, ?,)
+    SQL
+
+    connection.execute insert_query, params['Court_id'], params['user_id'], params['DateTime'], Date.current.to_s
+
+    redirect_to 'home#home'
+  end
+
   # GET /orders
   # GET /orders.json
   def index
