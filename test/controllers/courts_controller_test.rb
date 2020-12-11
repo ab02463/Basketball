@@ -17,7 +17,7 @@ class CourtsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create court" do
     assert_difference('Court.count') do
-      post courts_url, params: { court: { address: @court.address, employee_id: @court.employee_id, name: @court.name } }
+      post courts_url, params: { court: { adress: @court.adress, employee_id: @court.employee_id, name: @court.name } }
     end
 
     assert_redirected_to court_url(Court.last)
@@ -34,7 +34,7 @@ class CourtsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update court" do
-    patch court_url(@court), params: { court: { address: @court.address, employee_id: @court.employee_id, name: @court.name } }
+    patch court_url(@court), params: { court: { adress: @court.adress, employee_id: @court.employee_id, name: @court.name } }
     assert_redirected_to court_url(@court)
   end
 

@@ -1,11 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  adress: MyString
   employee: one
+  email: MyString
 
 two:
-  name: MyString
-  adress: MyString
   employee: two
+  email: MyString

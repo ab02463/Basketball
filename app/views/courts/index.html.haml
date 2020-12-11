@@ -4,7 +4,7 @@
   %thead
     %tr
       %th Name
-      %th Address
+      %th Adress
       %th Employee
       %th
       %th
@@ -14,7 +14,7 @@
     - @courts.each do |court|
       %tr
         %td= court.name
-        %td= court.address
+        %td= court.adress
         %td= court.employee
         %td= link_to 'Show', court
         %td= link_to 'Edit', edit_court_path(court)

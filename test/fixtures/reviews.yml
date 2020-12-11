@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Court: one
   user: one
-  DateTime: 2020-12-11 14:14:23
+  title: MyString
+  review: MyText
 
 two:
-  Court: two
   user: two
-  DateTime: 2020-12-11 14:14:23
+  title: MyString
+  review: MyText

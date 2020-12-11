@@ -1,0 +1,2 @@
+module EmployeeEmailsHelper
+end

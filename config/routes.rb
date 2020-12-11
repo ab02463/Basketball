@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :courts
+  resources :employee_emails
+  resources :reviews
   resources :orders
+  resources :courts
   resources :employees
   devise_for :users
   root 'home#home'
