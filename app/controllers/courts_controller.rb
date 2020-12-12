@@ -1,6 +1,6 @@
 class CourtsController < ApplicationController
   before_action :set_court, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /courts
   # GET /courts.json
   def index

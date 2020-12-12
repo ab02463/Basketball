@@ -1,6 +1,6 @@
 class EmployeeEmailsController < ApplicationController
   before_action :set_employee_email, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /employee_emails
   # GET /employee_emails.json
   def index
