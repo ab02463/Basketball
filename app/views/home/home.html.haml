@@ -1,13 +1,8 @@
 %h1= t('.title')
-%p= t('.welcome')
+%p#one= t('.welcome')
+= image_tag "basketballCourt.jpg"
+%p#two= t('.about')
+
+
 
 %br/
-%form{:method => "post",:action => "/make_order"}
-  = hidden_field_tag :authenticity_token, form_authenticity_token
-  %p1= t('.email')
-  %input#email{:name => "user_id", :type => "text"}/
-  %p2= t('.fname')
-  %input#fname{:name => "Court_id", :type => "text"}/
-  %p3= t('.lname')
-  %input#lname{:name => "DateTime", :type => "text"}/
-  %input{:type => "submit", :value => "Submit"}/
