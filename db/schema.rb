@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_12_11_172237) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_employee_emails_on_email", unique: true
     t.index ["employee_id"], name: "index_employee_emails_on_employee_id"
-    t.index [nil], name: "index_employee_emails_on_employee", unique: true
+    t.index [nil], name: "index_employee_emails_on_employee"
   end
 
   create_table "employees", force: :cascade do |t|
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_12_11_172237) do
     t.datetime "updated_at", null: false
     t.index ["id"], name: "index_reviews_on_id", unique: true
     t.index ["user_id"], name: "index_reviews_on_user_id"
-    t.index [nil], name: "index_reviews_on_user", unique: true
+    t.index [nil], name: "index_reviews_on_user"
   end
 
   create_table "users", force: :cascade do |t|

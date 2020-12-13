@@ -6,7 +6,7 @@ class CreateEmployeeEmails < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-  add_index :employee_emails, :employee, unique: true
+  add_index :employee_emails, :employee
   add_index :employee_emails, :email, unique: true
   end
 end
